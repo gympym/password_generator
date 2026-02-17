@@ -11,7 +11,8 @@
             <h1>Generate a <br><span id="highlight">random password</span></h1>
             <p id="slogan">Never use an insecure password again.</p>
             <input type="number" id="length-input"
-                   min="8" max="20" placeholder="Password length 8 to 36" value="8">
+                   min="8" max="48" placeholder="Password length 8 to 36" value="8">
+            <p id="length-text">*length from 8 to 48</p>
             <div class="num-toggle">
                 <label class="switch">
                     <input type="checkbox" checked id="num-toggle">
@@ -26,7 +27,6 @@
                 </label>
                 <p class="num-text">Special symbols</p>
             </div>
-
             <button onclick="showPassword()" id="generate-btn">Generate passwords</button>
         </div>
         <div id="result">
@@ -34,10 +34,13 @@
                     onclick="copyPassword('password1-el')"></button>
             <button id="password2-el" class="generator"
                     onclick="copyPassword('password2-el')"></button>
+            <button id="password3-el" class="generator"
+                    onclick="copyPassword('password3-el')"></button>
         </div>
+    </div>
+    <div id="copy-massage-footer">
         <p id="copy-message"></p>
     </div>
-
 
         <script src="index.js"></script>
     </body>

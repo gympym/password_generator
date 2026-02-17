@@ -23,7 +23,7 @@ p {
 }
 
 #container {
-    height: 400px;
+    height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,17 +61,19 @@ p {
 }
 
 #result{
-    width: 400px;
+    width: 430px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    margin-bottom: 0;
     border-top: #273549 1px solid;
     padding: 30px 10px;
 }
 
 .generator {
-    width: 180px;
+    width: 400px;
     height: 30px;
     color: #55F991;
     background: #273549;
@@ -86,7 +88,14 @@ p {
     transition: .4s;
 }
 
+#copy-massage-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 #copy-message {
+    margin-top: 0;
     font-weight: 200;
 }
 
@@ -94,9 +103,14 @@ p {
     border: none;
     border-radius: 3px;
     width: 150px;
+    margin-bottom: 2px;
+
+}
+
+#length-text {
+    margin-top: 3px;
     margin-bottom: 10px;
-    /*background: #273549;*/
-    /*color: white;*/
+    font-weight: 200;
 }
 
 /*Toggle*/

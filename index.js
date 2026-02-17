@@ -7,6 +7,7 @@ const specialSymbols = ["~","`","!","@","#","$","%","^","&","*","(",")",
     "/"]
 let password1El = document.getElementById("password1-el")
 let password2El = document.getElementById("password2-el")
+let password3El = document.getElementById("password3-el")
 let passLength = document.getElementById("length-input")
 let numToggle = document.getElementById("num-toggle")
 let symbolsToggle = document.getElementById("symbols-toggle")
@@ -61,6 +62,7 @@ function generatePassword() {
 function showPassword() {
     password1El.innerText = generatePassword();
     password2El.innerText = generatePassword();
+    password3El.innerText = generatePassword();
 }
 
 function massagePop(massage){
