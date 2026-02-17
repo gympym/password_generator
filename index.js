@@ -17,26 +17,27 @@ function randomNum(massiveLength) {
     return Math.floor(Math.random() * massiveLength);
 }
 
-function passwordConstruct(number, symbol) {
+function symbolGenerator(number, symbol) {
     let password = ""
+    let numOrSymbol = 0
     if (!number && !symbol){
         password += characters[randomNum(characters.length)]
     } else if(number && !symbol){
-        let numOrSymbol = Math.floor(Math.random() * 2) + 1
+        numOrSymbol = Math.floor(Math.random() * 2) + 1
         if (numOrSymbol === 1){
             password += characters[randomNum(characters.length)]
         } else if(numOrSymbol === 2){
             password += numbers[randomNum(numbers.length)]
         }
     } else if(!number && symbol){
-        let numOrSymbol = Math.floor(Math.random() * 2) + 1
+        numOrSymbol = Math.floor(Math.random() * 2) + 1
         if (numOrSymbol === 1){
             password += characters[randomNum(characters.length)]
         } else if(numOrSymbol === 2){
             password += specialSymbols[randomNum(specialSymbols.length)]
         }
     } else if(number && symbol){
-        let numOrSymbol = Math.floor(Math.random() * 3) + 1
+        numOrSymbol = Math.floor(Math.random() * 3) + 1
         if (numOrSymbol === 1){
             password += characters[randomNum(characters.length)]
         } else if(numOrSymbol === 2){
@@ -54,7 +55,7 @@ function generatePassword() {
     let nToggle = numToggle.checked
     let sToggle = symbolsToggle.checked
     for (let i = 0; i < passwordLength; i++) {
-        password += passwordConstruct(nToggle, sToggle)
+        password += symbolGenerator(nToggle, sToggle)
     }
     return password
 }
