@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div id="container">
+        <div id="main">
+            <h1>Generate a <br><span id="highlight">random password</span></h1>
+            <p id="slogan">Never use an insecure password again.</p>
+            <input type="number" id="length-input"
+                   min="8" max="36" placeholder="Password length 8 to 36" value="8">
+            <div class="num-toggle">
+                <label class="switch">
+                    <input type="checkbox" checked id="num-toggle">
+                    <span class="slider"></span>
+                </label>
+                <p class="num-text">Numbers</p>
+            </div>
+            <div class="num-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="symbols-toggle">
+                    <span class="slider"></span>
+                </label>
+                <p class="num-text">Special symbols</p>
+            </div>
+
+            <button onclick="showPassword()" id="generate-btn">Generate passwords</button>
+        </div>
+        <div id="result">
+            <button id="password1-el" class="generator"
+                    onclick="copyPassword('password1-el')"></button>
+            <button id="password2-el" class="generator"
+                    onclick="copyPassword('password2-el')"></button>
+        </div>
+        <p id="copy-message"></p>
+    </div>
+
+
+        <script src="index.js"></script>
+    </body>
+</html>
